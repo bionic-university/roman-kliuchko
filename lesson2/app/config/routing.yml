@@ -1,5 +1,10 @@
-bionic_university_blog:
-    resource: "@BionicUniversityBlogBundle/Controller/"
+bionic_university_project:
+    resource: "@BionicUniversityProjectBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /proj
+
+#bionic_university_blog:
+#    resource: "@BionicUniversityBlogBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
 

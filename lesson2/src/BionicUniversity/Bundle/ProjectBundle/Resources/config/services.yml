@@ -1,0 +1,14 @@
+services:
+    user_listener:
+        class: BionicUniversity\Bundle\ProjectBundle\EventListener\UserListener
+        arguments:
+            - @swiftmailer.mailer.default
+        tags:
+            - { name: doctrine.event_listener, event: postPersist, connection: default }
+
+    project_subscriber:
+        class: BionicUniversity\Bundle\ProjectBundle\EventListener\ProjectSubscriber
+        arguments:
+            - @swiftmailer.mailer.default
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }

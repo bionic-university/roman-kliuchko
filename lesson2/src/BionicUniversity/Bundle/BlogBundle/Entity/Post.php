@@ -58,6 +58,13 @@ class Post
     private $user;
 
     /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime")
+     */
+    private $created;
+
+    /**
      * @return ArrayCollection
      */
     public function getComments()
@@ -125,5 +132,25 @@ class Post
     public function __toString()
     {
         return $this->name;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * @param \DateTime $created
+     *
+     * @return $this
+     */
+    public function setCreated(\DateTime $created)
+    {
+        $this->created = $created;
+
+        return $this;
     }
 }

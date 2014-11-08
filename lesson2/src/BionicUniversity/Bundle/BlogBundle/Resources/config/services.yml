@@ -1,0 +1,5 @@
+services:
+    post_listener:
+        class: BionicUniversity\Bundle\BlogBundle\EventListener\PostListener
+        tags:
+            - { name: doctrine_event_listener, event:prePersist, connection: default }
